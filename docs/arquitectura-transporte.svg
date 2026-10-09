@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1110" viewBox="0 0 1960 1110" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#374151"/></marker></defs>
+<rect width="1960" height="1110" fill="#ffffff"/>
+<text x="30" y="44" font-size="26" font-weight="800" fill="#111827">Aplicativo informativo de transporte — Arquitectura en AWS</text>
+<text x="30" y="68" font-size="14" fill="#6b7280">Rutas, recorridos e incidentes · consulta pública sin sesión · Terraform en DEV, QA y PROD · región us-east-1</text>
+<rect x="290" y="90" width="1650" height="995" rx="12" fill="none" stroke="#232F3E" stroke-width="2"/>
+<text x="304" y="113" font-size="17" font-weight="700" fill="#232F3E">Nube AWS — us-east-1</text>
+<rect x="20" y="130" width="240" height="690" rx="12" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="34" y="153" font-size="15" font-weight="700" fill="#6b7280">Usuarios</text>
+<rect x="800" y="110" width="730" height="820" rx="12" fill="none" stroke="#8C4FFF" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="814" y="133" font-size="15" font-weight="700" fill="#8C4FFF">VPC · 10.x.0.0/16 · 2 zonas de disponibilidad</text>
+<rect x="820" y="150" width="690" height="145" rx="12" fill="#f5f0ff" stroke="#8C4FFF" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="834" y="173" font-size="13" font-weight="700" fill="#8C4FFF">Subredes públicas · AZ-a y AZ-b</text>
+<rect x="820" y="310" width="520" height="600" rx="12" fill="#faf7ff" stroke="#8C4FFF" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="834" y="333" font-size="13" font-weight="700" fill="#8C4FFF">Subredes privadas · AZ-a y AZ-b</text>
+<rect x="1360" y="310" width="150" height="600" rx="12" fill="#f5f0ff" stroke="#8C4FFF" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1374" y="333" font-size="13" font-weight="700" fill="#8C4FFF">VPC Endpoints</text>
+<g transform="translate(108,178)"><rect width="64" height="64" rx="9" fill="#232F3E"/><circle cx="32" cy="22" r="9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 52 Q14 36 32 36 Q50 36 50 52" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="140" y="262" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Pasajero</text>
+<text x="140" y="279" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">sin iniciar sesión</text>
+<text x="140" y="296" font-size="12" text-anchor="middle" fill="#4b5563">consulta rutas e incidentes</text>
+<g transform="translate(108,338)"><rect width="64" height="64" rx="9" fill="#232F3E"/><circle cx="32" cy="22" r="9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 52 Q14 36 32 36 Q50 36 50 52" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="140" y="422" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Pasajero</text>
+<text x="140" y="439" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">con sesión</text>
+<text x="140" y="456" font-size="12" text-anchor="middle" fill="#4b5563">su ruta de siempre · alertas</text>
+<g transform="translate(108,498)"><rect width="64" height="64" rx="9" fill="#232F3E"/><circle cx="32" cy="32" r="18" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="4" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 32 H28 M36 32 H50 M32 36 V50" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="140" y="582" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Conductor</text>
+<text x="140" y="599" font-size="12" text-anchor="middle" fill="#4b5563">reporta incidentes</text>
+<g transform="translate(108,658)"><rect width="64" height="64" rx="9" fill="#232F3E"/><rect x="14" y="12" width="36" height="40" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 22 H28 M36 22 H42 M22 32 H28 M36 32 H42 M28 52 V43 H36 V52" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="140" y="742" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Empresa de</text>
+<text x="140" y="759" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">transporte</text>
+<text x="140" y="776" font-size="12" text-anchor="middle" fill="#4b5563">publica rutas e información</text>
+<g transform="translate(348,178)"><rect width="64" height="64" rx="9" fill="#DD344C"/><path d="M32 10 L50 17 V32 C50 44 42 51 32 55 C22 51 14 44 14 32 V17 Z" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="380" y="262" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">AWS WAF</text>
+<text x="380" y="279" font-size="12" text-anchor="middle" fill="#4b5563">protege el sitio</text>
+<g transform="translate(508,178)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><circle cx="32" cy="32" r="18" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="32" cy="32" rx="8" ry="18" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 32 H50" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="540" y="262" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">CloudFront</text>
+<text x="540" y="279" font-size="12" text-anchor="middle" fill="#4b5563">CDN · HTTPS</text>
+<g transform="translate(668,178)"><rect width="64" height="64" rx="9" fill="#3F8624"/><ellipse cx="32" cy="20" rx="16" ry="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 20 L21 49 Q32 56 43 49 L48 20" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="700" y="262" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">S3 Frontend</text>
+<text x="700" y="279" font-size="12" text-anchor="middle" fill="#4b5563">sitio web estático</text>
+<g transform="translate(348,398)"><rect width="64" height="64" rx="9" fill="#DD344C"/><circle cx="32" cy="22" r="9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 52 Q14 36 32 36 Q50 36 50 52" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="380" y="482" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Cognito</text>
+<text x="380" y="499" font-size="12" text-anchor="middle" fill="#4b5563">User Pool · grupos:</text>
+<text x="380" y="514" font-size="12" text-anchor="middle" fill="#4b5563">pasajero / conductor / empresa</text>
+<g transform="translate(508,528)"><rect width="64" height="64" rx="9" fill="#E7157B"/><path d="M24 20 L12 32 L24 44 M40 20 L52 32 L40 44 M36 16 L28 48" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="540" y="612" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">API Gateway</text>
+<text x="540" y="629" font-size="12" text-anchor="middle" fill="#4b5563">HTTP API · autorizador JWT</text>
+<g transform="translate(868,188)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><circle cx="32" cy="32" r="18" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="32" cy="32" rx="8" ry="18" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 32 H50" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="900" y="272" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Internet</text>
+<text x="900" y="289" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Gateway</text>
+<g transform="translate(1128,188)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><path d="M12 24 H46 M38 16 L48 24 L38 32 M52 42 H18 M26 34 L16 42 L26 50" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1160" y="272" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">NAT Gateway A</text>
+<text x="1160" y="289" font-size="12" text-anchor="middle" fill="#4b5563">Elastic IP</text>
+<g transform="translate(1388,188)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><path d="M12 24 H46 M38 16 L48 24 L38 32 M52 42 H18 M26 34 L16 42 L26 50" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1420" y="272" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">NAT Gateway B</text>
+<text x="1420" y="289" font-size="12" text-anchor="middle" fill="#4b5563">Elastic IP</text>
+<g transform="translate(888,348)"><rect width="64" height="64" rx="9" fill="#ED7100"/><path d="M20 14 L44 50 M31 33 L20 50" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="920" y="432" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">consulta-lambda</text>
+<text x="920" y="449" font-size="12" text-anchor="middle" fill="#4b5563">lee rutas e incidentes</text>
+<g transform="translate(888,468)"><rect width="64" height="64" rx="9" fill="#ED7100"/><path d="M20 14 L44 50 M31 33 L20 50" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="920" y="552" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">empresa-lambda</text>
+<text x="920" y="569" font-size="12" text-anchor="middle" fill="#4b5563">publica rutas e info</text>
+<g transform="translate(888,588)"><rect width="64" height="64" rx="9" fill="#ED7100"/><path d="M20 14 L44 50 M31 33 L20 50" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="920" y="672" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">incidentes-lambda</text>
+<text x="920" y="689" font-size="12" text-anchor="middle" fill="#4b5563">registra incidentes</text>
+<g transform="translate(1148,768)"><rect width="64" height="64" rx="9" fill="#ED7100"/><path d="M20 14 L44 50 M31 33 L20 50" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1180" y="852" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">notificador-lambda</text>
+<text x="1180" y="869" font-size="12" text-anchor="middle" fill="#4b5563">avisa a quien sigue la ruta</text>
+<g transform="translate(1408,348)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><circle cx="18" cy="32" r="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="32" r="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32 H42" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1440" y="432" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">DynamoDB</text>
+<text x="1440" y="449" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Gateway Endpoint</text>
+<g transform="translate(1408,598)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><circle cx="18" cy="32" r="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="32" r="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32 H42" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1440" y="682" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">SQS Interface</text>
+<text x="1440" y="699" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Endpoint</text>
+<g transform="translate(1408,768)"><rect width="64" height="64" rx="9" fill="#8C4FFF"/><circle cx="18" cy="32" r="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="32" r="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32 H42" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1440" y="852" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">SNS Interface</text>
+<text x="1440" y="869" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Endpoint</text>
+<g transform="translate(1648,348)"><rect width="64" height="64" rx="9" fill="#3B48CC"/><ellipse cx="32" cy="17" rx="16" ry="6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 17 V46 Q16 53 32 53 Q48 53 48 46 V17 M16 31 Q16 37 32 37 Q48 37 48 31" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1680" y="432" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">DynamoDB</text>
+<text x="1680" y="449" font-size="12" text-anchor="middle" fill="#4b5563">Rutas · Incidentes · Favoritos</text>
+<text x="1680" y="464" font-size="12" text-anchor="middle" fill="#4b5563">PITR + TTL de incidentes</text>
+<g transform="translate(1648,598)"><rect width="64" height="64" rx="9" fill="#E7157B"/><rect x="8" y="25" width="13" height="14" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="25.5" y="25" width="13" height="14" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="43" y="25" width="13" height="14" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1680" y="682" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">SQS incidentes</text>
+<text x="1680" y="699" font-size="12" text-anchor="middle" fill="#4b5563">visibilidad 360 s</text>
+<g transform="translate(1818,598)"><rect width="64" height="64" rx="9" fill="#E7157B"/><rect x="8" y="25" width="13" height="14" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="25.5" y="25" width="13" height="14" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="43" y="25" width="13" height="14" rx="2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1850" y="682" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">SQS DLQ</text>
+<text x="1850" y="699" font-size="12" text-anchor="middle" fill="#4b5563">retención 14 días</text>
+<g transform="translate(1818,768)"><rect width="64" height="64" rx="9" fill="#E7157B"/><circle cx="28" cy="28" r="14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 38 L50 50 M22 30 L27 24 L31 32 L35 25" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1850" y="852" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">CloudWatch Alarm</text>
+<text x="1850" y="869" font-size="12" text-anchor="middle" fill="#4b5563">avisa al equipo por SNS</text>
+<g transform="translate(1648,768)"><rect width="64" height="64" rx="9" fill="#E7157B"/><circle cx="32" cy="32" r="8" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 8 V16 M32 48 V56 M8 32 H16 M48 32 H56 M15 15 L21 21 M43 43 L49 49 M49 15 L43 21 M21 43 L15 49" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1680" y="852" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">SNS Topic</text>
+<text x="1680" y="869" font-size="12" text-anchor="middle" fill="#4b5563">filtro por ruta</text>
+<g transform="translate(1648,948)"><rect width="64" height="64" rx="9" fill="#232F3E"/><circle cx="32" cy="22" r="9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 52 Q14 36 32 36 Q50 36 50 52" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1680" y="1032" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Pasajeros suscritos</text>
+<text x="1680" y="1049" font-size="12" text-anchor="middle" fill="#4b5563">correo · SMS · push</text>
+<rect x="310" y="840" width="480" height="220" rx="12" fill="none" stroke="#DD344C" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="324" y="863" font-size="13" font-weight="700" fill="#DD344C">Seguridad y observabilidad</text>
+<g transform="translate(368,898)"><rect width="64" height="64" rx="9" fill="#DD344C"/><circle cx="32" cy="22" r="9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 52 Q14 36 32 36 Q50 36 50 52" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="400" y="982" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">IAM Roles</text>
+<text x="400" y="999" font-size="12" text-anchor="middle" fill="#4b5563">mínimo privilegio</text>
+<g transform="translate(588,898)"><rect width="64" height="64" rx="9" fill="#E7157B"/><circle cx="28" cy="28" r="14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 38 L50 50 M22 30 L27 24 L31 32 L35 25" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="620" y="982" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">CloudWatch Logs</text>
+<text x="620" y="999" font-size="12" text-anchor="middle" fill="#4b5563">lambdas + API · 14 días</text>
+<path d="M264,210 L344,210" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="270" y="198" width="67" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="304" y="214" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">1 HTTPS</text>
+<path d="M416,210 L504,210" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M576,210 L664,210" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="580" y="198" width="81" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="620" y="214" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">estáticos</text>
+<path d="M264,430 L344,430" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="270" y="418" width="67" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="304" y="434" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">2 login</text>
+<path d="M416,430 L540,430 L540,524" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<rect x="434" y="418" width="88" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="478" y="434" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">valida JWT</text>
+<path d="M264,560 L504,560" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="340" y="548" width="88" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="384" y="564" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">3 API REST</text>
+<path d="M576,560 L700,560 L700,380 L884,380" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="738" y="368" width="109" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="792" y="384" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">4 GET público</text>
+<path d="M576,560 L700,560 L700,500 L884,500" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="738" y="488" width="109" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="792" y="504" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">5 PUT empresa</text>
+<path d="M576,560 L700,560 L700,620 L884,620" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="727" y="608" width="130" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="792" y="624" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">6 POST conductor</text>
+<path d="M956,380 L1404,380" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="1094" y="368" width="172" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="1180" y="384" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">lee rutas / incidentes</text>
+<path d="M956,500 L1020,500 L1020,382" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M956,600 L1060,600 L1060,382" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M956,618 L1404,618" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="1195" y="606" width="130" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="1260" y="622" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">7 publica evento</text>
+<path d="M1180,764 L1180,648 L1404,648" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<rect x="1232" y="636" width="116" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="1290" y="652" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">recibe / borra</text>
+<path d="M1216,800 L1404,800" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="1248" y="788" width="123" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="1310" y="804" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">8 publica aviso</text>
+<path d="M1476,380 L1644,380" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1476,630 L1644,630" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1476,800 L1644,800" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1716,630 L1814,630" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<rect x="1728" y="618" width="74" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="1765" y="634" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">3 fallos</text>
+<path d="M1850,705 L1850,764" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M1680,875 L1680,944" fill="none" stroke="#374151" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="1643" y="888" width="74" height="23" rx="11.5" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+<text x="1680" y="904" font-size="12.5" font-weight="700" text-anchor="middle" fill="#374151">9 avisos</text>
+<rect x="1560" y="105" width="370" height="215" rx="12" fill="#f9fafb" stroke="#374151" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1574" y="128" font-size="14" font-weight="700" fill="#374151">Flujo</text>
+<text x="1576" y="145" font-size="12.5" fill="#1f2937">1-3  Todos usan la web; quien inicia sesión pasa por Cognito.</text>
+<text x="1576" y="171" font-size="12.5" fill="#1f2937">4  Cualquiera consulta rutas e incidentes (sin sesión).</text>
+<text x="1576" y="197" font-size="12.5" fill="#1f2937">5  La empresa publica rutas, horarios y avisos.</text>
+<text x="1576" y="223" font-size="12.5" fill="#1f2937">6-7  El conductor reporta un incidente → DynamoDB + SQS.</text>
+<text x="1576" y="249" font-size="12.5" fill="#1f2937">8-9  El notificador avisa por SNS a quienes siguen esa ruta.</text>
+<text x="1576" y="275" font-size="12.5" fill="#1f2937">–  Si falla 3 veces: DLQ → alarma CloudWatch → SNS.</text>
+<text x="1576" y="305" font-size="11.5" fill="#6b7280">DEV: 1 NAT · QA/PROD: 1 NAT por zona</text>
+</svg>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transporte Info — rutas e incidentes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">&#128652;</span>
+      <div>
+        <h1>Transporte Info</h1>
+        <p class="sub">Rutas, recorridos e incidentes <span id="env" class="badge"></span></p>
+      </div>
+    </div>
+    <div class="session">
+      <span id="who"></span>
+      <button id="btn-login" class="btn">Iniciar sesión</button>
+      <button id="btn-logout" class="btn ghost" hidden>Salir</button>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="rutas">Rutas</button>
+    <button class="tab" data-tab="incidentes">Incidentes</button>
+    <button class="tab" data-tab="favoritas" data-auth="user" hidden>Mis rutas</button>
+    <button class="tab" data-tab="reportar" data-auth="conductor" hidden>Reportar incidente</button>
+    <button class="tab" data-tab="publicar" data-auth="empresa" hidden>Publicar ruta</button>
+  </nav>
+
+  <main>
+    <p id="msg" class="msg" role="status" hidden></p>
+
+    <section id="tab-rutas" class="panel">
+      <div class="bar">
+        <input id="q" type="search" placeholder="Buscar por ruta, paradero, origen o destino…" aria-label="Buscar rutas">
+        <button id="btn-buscar" class="btn">Buscar</button>
+      </div>
+      <div id="rutas" class="cards"></div>
+      <p class="hint">No necesitas cuenta para consultar rutas e incidentes.</p>
+    </section>
+
+    <section id="tab-incidentes" class="panel" hidden>
+      <div class="bar">
+        <select id="f-ruta" aria-label="Filtrar por ruta"><option value="">Todas las rutas</option></select>
+        <button id="btn-inc" class="btn">Actualizar</button>
+      </div>
+      <div id="incidentes" class="cards"></div>
+    </section>
+
+    <section id="tab-favoritas" class="panel" hidden>
+      <p>Marca tus rutas de siempre y recibirás por correo los incidentes que ocurran en ellas.</p>
+      <div id="favs" class="checks"></div>
+      <button id="btn-fav" class="btn">Guardar mis rutas</button>
+      <p class="hint">La primera vez recibirás un correo de Amazon SNS: confirma la suscripción para activar los avisos.</p>
+    </section>
+
+    <section id="tab-reportar" class="panel" hidden>
+      <form id="form-inc" class="form">
+        <label>Ruta <select name="rutaId" required></select></label>
+        <label>Tipo
+          <select name="tipo" required>
+            <option value="accidente">Accidente</option>
+            <option value="congestion">Congestión</option>
+            <option value="desvio">Desvío</option>
+            <option value="obra">Obra en la vía</option>
+            <option value="falla">Falla del vehículo</option>
+            <option value="clima">Clima</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+        <label>Descripción <textarea name="descripcion" rows="3" maxlength="280" required placeholder="¿Qué ocurrió?"></textarea></label>
+        <label>Ubicación (opcional) <input name="ubicacion" maxlength="100" placeholder="Ej.: Av. Larco con Av. España"></label>
+        <button class="btn" type="submit">Enviar reporte</button>
+      </form>
+    </section>
+
+    <section id="tab-publicar" class="panel" hidden>
+      <form id="form-ruta" class="form">
+        <label>Nombre de la ruta <input name="nombre" required minlength="3" maxlength="80"></label>
+        <label>Origen <input name="origen" required maxlength="80"></label>
+        <label>Destino <input name="destino" required maxlength="80"></label>
+        <label>Horario <input name="horario" maxlength="120" placeholder="05:30 - 22:00 · cada 10 min"></label>
+        <label>Tarifa <input name="tarifa" maxlength="30" placeholder="S/ 1.50"></label>
+        <label>Paradas (una por línea) <textarea name="paradas" rows="4" placeholder="Plaza de Armas&#10;Av. España"></textarea></label>
+        <label>Estado
+          <select name="estado">
+            <option value="operativa">Operativa</option>
+            <option value="desviada">Desviada</option>
+            <option value="suspendida">Suspendida</option>
+          </select>
+        </label>
+        <button class="btn" type="submit">Publicar ruta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>Aplicativo informativo · los datos de rutas los publican las empresas de transporte.</footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
