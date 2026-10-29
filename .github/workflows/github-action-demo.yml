@@ -1,91 +1,31 @@
-name: Transporte Info - Terraform DEV
+name: Transporte Info - GitHub Actions Demo
 
-run-name: ${{ github.actor }} está desplegando transporte-info (${{ github.event_name }})
+run-name: "${{ github.actor }} ejecuta un pipeline de transporte-info-iac"
 
-on:
-  push:
-    branches:
-      - development
-  workflow_dispatch:
-    inputs:
-      accion:
-        description: "Acción a ejecutar"
-        required: true
-        default: "apply"
-        type: choice
-        options:
-          - apply
-          - destroy
-
-permissions:
-  contents: read
-  id-token: write
-
-concurrency:
-  group: terraform-dev
-  cancel-in-progress: false
-
-env:
-  TF_IN_AUTOMATION: "true"
-  TF_WORKING_DIR: envs/dev
+on: [push]
 
 jobs:
-
-  terraform:
-    name: Terraform ${{ inputs.accion || 'apply' }} (dev)
+  Verificar-Proyecto:
     runs-on: ubuntu-latest
-    environment: dev
-
-    defaults:
-      run:
-        working-directory: ${{ env.TF_WORKING_DIR }}
 
     steps:
-      - name: Checkout repository
+      - name: Mostrar evento ejecutado
+        run: echo "Este job se ha ejecutado por el evento ${{ github.event_name }}"
+
+      - name: Mostrar rama y repositorio
+        run: echo "La rama es ${{ github.ref }} y el repositorio es ${{ github.repository }}"
+
+      - name: Descargar el repositorio
         uses: actions/checkout@v6
 
-      - name: Configurar credenciales AWS (OIDC)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
-          aws-region: ${{ vars.AWS_REGION }}
-
-      - name: Verificar identidad AWS
-        run: aws sts get-caller-identity
-
-      - name: Instalar Terraform
-        uses: hashicorp/setup-terraform@v3
-        with:
-          terraform_version: 1.9.8
-
-      - name: Terraform fmt
-        run: terraform fmt -check -recursive ../../
-        continue-on-error: true
-
-      - name: Terraform init
-
+      - name: Mostrar archivos del proyecto
         run: |
-          terraform init \
-            -backend-config="bucket=${{ vars.TF_STATE_BUCKET }}" \
-            -backend-config="key=lab09/dev/terraform.tfstate" \
-            -backend-config="region=${{ vars.AWS_REGION }}" \
-            -backend-config="use_lockfile=true"
+          echo "Directorio de trabajo:"
+          echo "${{ github.workspace }}"
+          echo "Archivos y carpetas del proyecto:"
+          ls -la "${{ github.workspace }}"
 
-      - name: Terraform validate
-        run: terraform validate
-
-      - name: Terraform plan
-        if: ${{ (inputs.accion || 'apply') == 'apply' }}
-        run: terraform plan -input=false -out=tfplan
-
-      - name: Terraform apply
-        if: ${{ (inputs.accion || 'apply') == 'apply' }}
-        run: terraform apply -input=false -auto-approve tfplan
-
-      - name: Mostrar salidas (web_url, api_url, login_url)
-        if: ${{ (inputs.accion || 'apply') == 'apply' }}
-        run: terraform output
-
-      - name: Terraform destroy
-        if: ${{ inputs.accion == 'destroy' }}
-        run: terraform destroy -input=false -auto-approve
+      - name: Mostrar estructura del proyecto
+        run: |
+          echo "Estructura de archivos:"
+          find . -maxdepth 2 -type f -not -path './.git/*' | sort
