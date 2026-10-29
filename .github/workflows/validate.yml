@@ -1,0 +1,54 @@
+  name: Transporte Info - Validación
+
+  run-name: ${{ github.actor }} está validando transporte-info-iac
+
+  on:
+    push:
+      branches:
+        - development
+    workflow_dispatch:
+
+  permissions:
+    contents: read
+
+  jobs:
+    terraform-validate:
+      name: Terraform fmt, init y validate (dev)
+      runs-on: ubuntu-latest
+      environment: dev
+      defaults:
+        run:
+          working-directory: envs/dev
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v6
+
+        - name: Instalar Terraform
+          uses: hashicorp/setup-terraform@v3
+          with:
+            terraform_version: 1.11.4
+
+        - name: Terraform fmt
+          run: terraform fmt -check -recursive ../../
+
+
+        - name: Terraform init (sin backend)
+          run: terraform init -backend=false
+
+        - name: Terraform validate
+          run: terraform validate
+
+    pruebas-lambdas:
+      name: Pruebas de las Lambdas
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v6
+
+        - name: Instalar Node.js 20
+          uses: actions/setup-node@v4
+          with:
+            node-version: 20
+
+        - name: Ejecutar pruebas
+          run: node tests/run.js
