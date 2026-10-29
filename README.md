@@ -121,3 +121,54 @@ Repite en cada entorno desplegado y guarda la captura de `Destroy complete! Reso
 ## Seguridad
 
 Buckets privados con cifrado y solo TLS; acceso a S3 únicamente vía CloudFront (OAC); DynamoDB cifrada con recuperación a un punto en el tiempo; SQS cifrada; validación y limpieza de todas las entradas; la web escribe los datos con `textContent` (sin XSS); roles que no pueden elevarse (los grupos solo los asigna un administrador).
+
+## Automatización con GitHub Actions y AWS OIDC
+
+El proyecto permite validar la infraestructura de Terraform desde GitHub Actions y autenticarse con AWS mediante OpenID Connect (OIDC).
+
+### Autenticación segura
+
+La autenticación entre GitHub Actions y AWS utiliza un proveedor de identidad OIDC y un rol de IAM. Este mecanismo permite obtener credenciales temporales sin almacenar claves de acceso permanentes de AWS en el repositorio.
+
+La configuración debe restringir la confianza al repositorio y a las ramas o entornos autorizados.
+
+### Variables de GitHub Actions
+
+En el repositorio, acceder a:
+
+`Settings → Secrets and variables → Actions`
+
+Configurar las variables necesarias para el workflow:
+
+| Variable | Descripción | Ejemplo o valor |
+|---|---|---|
+| `AWS_REGION` | Región de AWS utilizada por Terraform | `us-east-2` |
+| `TF_STATE_BUCKET` | Nombre del bucket S3 para el estado remoto | transporte-info-tfstate-554631440137 |
+
+### Flujo de validación
+
+El workflow de validación debe comprobar, según su configuración:
+
+1. Descarga del repositorio.
+2. Disponibilidad de las variables requeridas.
+3. Autenticación con AWS mediante OIDC.
+4. Identidad de la cuenta autenticada con `aws sts get-caller-identity`.
+5. Inicialización del backend de Terraform.
+6. Validación de la configuración con `terraform validate`.
+
+### Despliegue y destrucción
+
+Para desplegar un entorno manualmente:
+
+```powershell
+cd envs\dev
+terraform init
+terraform plan
+terraform apply
+```
+
+Para destruirlo después de realizar las pruebas:
+
+```powershell
+terraform destroy
+```
